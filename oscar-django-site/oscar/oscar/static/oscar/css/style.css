@@ -1,0 +1,243 @@
+/*
+Browser Compatibility purposed reset.
+*/
+*
+{
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body 
+{
+    margin:0;
+}
+
+#wrapper
+{
+}
+
+#header
+{
+	width: 100%;
+	background: url("../img/bg.png") center 0 fixed;
+	/*background-size: 100% 250px;  If we want to stretch image*/
+	height: 250px;
+}
+
+#header p
+{
+	font-family: 'IM Fell English SC', serif;
+}
+
+#mainBody
+{
+	margin-top: 25px;
+    background-color: white;
+    position: absolute;
+    top: 250px;
+    bottom: 100px;
+    width:100%;
+	overflow: auto;
+}
+
+#contentLeft
+{
+    color: black;
+	float: left;
+	width: 50%;
+	margin-left: 20%;
+	background-color: white;
+}
+
+#contentLeft h1
+{
+	color: #FFA71A;
+}
+
+#contentRight
+{
+	color: color;
+	background-color: white;
+	margin-left: 90px;
+}
+
+#contentLeft, #contentRight
+{
+	display: table-cell;
+}
+
+#footer
+{
+	background: url("../img/stolenDivider.png") repeat-x center 0;
+    background-color: white;    
+    position: absolute;
+    bottom: 0;
+	height: 100px;
+    width:100%;
+}
+
+ol
+{
+    counter-reset: item;
+    list-style-type: none;
+	/*ansform: rotate(180deg);*/
+	margin-left: 30px;
+	margin-top: 0px;
+}
+
+/*ol li:before
+{
+	color: #FFA71A;
+    content: 'Update #' counter(item, decimal) '. ';
+    counter-increment: item;
+}*/
+
+ol > li
+{
+    /*transform: rotate(-180deg);*/
+}
+
+ol#news
+{
+	list-style-type: none;
+	padding: 30px 0 40px;
+	font-size: 1em;
+}
+
+ol#news > li
+{
+	display: block;
+	background: url("../img/stolenDivider.png") no-repeat 25px 100%;
+}
+
+ol#news > li > a
+{
+	display: block;
+	padding: 5px 0 7px;
+	color: white;
+	text-shadow: 1px 1px #a96b27;
+	letter-spacing: -1px;
+	text-transform: lowercase;
+	margin-left: 24px;
+}
+
+ol#news li.active > a
+{
+	color: #8b3501;
+	text-shadow: 1px 1px #d7a367;
+}
+
+ol#news li a:hover
+{
+	color: #ffe7c2;
+}
+
+ol#news li.active > a:hover
+{
+	color: #8b3501;
+}
+
+p#news
+{
+	color: #FFA71A;
+	font-size: 2.0em;
+}
+
+p#newsTitle
+{
+    color: #FFA71A;
+    font-size: 1.2em;
+}
+
+#header {
+    width: 100%;
+    position: relative;
+}
+
+#header p
+{
+	position: absolute;
+	color: white;
+	bottom: 0;
+	font-size: 3em;
+	margin-left: 50px;
+}
+
+#header ul
+{
+	list-style-type: none;
+	padding-top: 25px;
+	padding-right: 30%;
+	float: right;
+}
+
+#header ul li
+{
+	display: inline;
+	color: #FFF;
+	margin-left: 30px;
+}
+
+#header ul li a
+{
+	text-decoration: none;
+}
+
+#header ul li a:link
+{
+	color: #FFF;
+}
+
+#header ul li a:visited
+{
+	color: #FFF;
+}
+
+#header ul li a:hover
+{
+	color: #808080;
+}
+
+#header ul li a:active
+{
+	color: #808080;
+}
+
+.starlabPic
+{
+	display: block;
+	position: absolute;
+    bottom: 0;
+	right: 0;
+	width: 100px;
+}
+
+.hyundaiPic
+{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+	width: 200px;
+}
+
+.rubisPic
+{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 300px;
+	width: 200px;
+}
+
+#footer p
+{
+	float: left;
+}
+
+#blogPostLink
+{
+    color: inherit;
+    text-decoration: none;
+}

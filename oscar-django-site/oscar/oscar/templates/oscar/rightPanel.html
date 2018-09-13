@@ -1,0 +1,20 @@
+<div id="contentRight">
+
+    <p id="news">Latest News</p>
+
+    {% if latest_updates %}
+    <ol id="news">
+
+        {% for update in latest_updates %}
+        <p id="newsTitle">{{ update.pub_date }}</p>
+        <li><a href="/oscar/post/{{ update.id }}">{{ update.post_title }}</a></li>
+
+        {% endfor %}
+
+    </ol>
+    {% else %}
+    <p>No news available.</p>
+    {% endif %}
+
+
+</div>

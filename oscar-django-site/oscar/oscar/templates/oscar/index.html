@@ -1,0 +1,19 @@
+<html>
+<head>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'oscar/css/style.css' %}">
+</head>
+<title>OSCar</title>
+<body>
+    <div id="wrapper">
+        {% include "oscar/header.html" %}
+        <div id="mainBody">
+            {% include "oscar/leftPanel.html" %}
+            {% include "oscar/rightPanel.html" %}
+        </div>
+        {% include "oscar/footer.html" %}
+    </div>
+</body>
+</html>
