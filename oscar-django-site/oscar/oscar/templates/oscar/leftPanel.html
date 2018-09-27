@@ -10,14 +10,14 @@
     <a id="blogPostLink" href="/oscar/post/{{ post.id }}">
         <h1 id="about">{{post.post_title}}, {{post.pub_date}}</h1>
     </a>
-        <p id="info">{{post.post_text|safe}}</p>
-        {% endfor %}
-        <a href="{% if prev_page_exists %}/oscar/blog/{{current_page|add:"-1"}}{% else %}#{% endif %}">Newer Posts</a> |
-        <a href="{% if next_page_exists %}/oscar/blog/{{current_page|add:"+1"}}{% else %}#{% endif %}">Older Posts</a>
-        {% else %}
-        <h1 id="about">Introduction</h1>
-        <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper eu justo nec mattis. Ut ac pretium nunc. Nunc mauris orci, ultricies at neque id, porta tristique turpis. Maecenas nec urna sit amet purus faucibus placerat non sit amet libero. Suspendisse non eros ipsum. Morbi vel nisi tortor. Nunc a sem placerat, scelerisque purus sit amet, auctor orci. Pellentesque ut ultrices leo, eget maximus metus. In at nisi nec mi varius mollis. Duis ac volutpat nunc, sed pharetra dolor. Morbi imperdiet sapien purus, a commodo nisi tristique et. Aliquam porta varius justo in suscipit. Phasellus sollicitudin luctus nisl, sit amet posuere tortor pulvinar ac.</p>
-        <h1 id="about">Our Car</h1>
-        <img src="{% static 'oscar/img/ourcar.jpg' %}" class="carPic" alt="car" width="400px" height="400px" style="display: block;">
-        {% endif %}
+    <p id="info">{{post.post_text|safe}}</p>
+    {% endfor %}
+    <a href="{% if prev_page_exists %}/oscar/blog/{{current_page|add:"-1"}}{% else %}#{% endif %}">Newer Posts</a> |
+    <a href="{% if next_page_exists %}/oscar/blog/{{current_page|add:"+1"}}{% else %}#{% endif %}">Older Posts</a>
+    {% else %}
+    <h1 id="about">Introduction</h1>
+    <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper eu justo nec mattis. Ut ac pretium nunc. Nunc mauris orci, ultricies at neque id, porta tristique turpis. Maecenas nec urna sit amet purus faucibus placerat non sit amet libero. Suspendisse non eros ipsum. Morbi vel nisi tortor. Nunc a sem placerat, scelerisque purus sit amet, auctor orci. Pellentesque ut ultrices leo, eget maximus metus. In at nisi nec mi varius mollis. Duis ac volutpat nunc, sed pharetra dolor. Morbi imperdiet sapien purus, a commodo nisi tristique et. Aliquam porta varius justo in suscipit. Phasellus sollicitudin luctus nisl, sit amet posuere tortor pulvinar ac.</p>
+    <h1 id="about">Our Car</h1>
+    <img src="{% static 'oscar/img/ourcar.jpg' %}" class="carPic" alt="car" width="400px" height="400px" style="display: block;">
+    {% endif %}
 </div>

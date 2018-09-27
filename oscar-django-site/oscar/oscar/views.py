@@ -10,6 +10,7 @@ def index(request):
     latest_updates = NewsPost.objects.order_by('-pub_date')[:3]
     context = {
                 'latest_updates': latest_updates,
+                'google_client_id' : site_settings.google_client_id,
               }
 
     return render(request, 'oscar/index.html', context)
@@ -20,6 +21,7 @@ def post(request, post_id):
     context = {
                 'latest_updates': latest_updates,
                 'active_post'   : active_post,
+                'google_client_id' : site_settings.google_client_id,
               }
 
     return render(request, 'oscar/index.html', context)
@@ -46,6 +48,7 @@ def blog(request, page_number=1):
                 'next_page_exists': next_page_exists,
                 'prev_page_exists': prev_page_exists,
                 'current_page': page_number,
+                'google_client_id' : site_settings.google_client_id,
               }
 
     return render(request, 'oscar/index.html', context)
