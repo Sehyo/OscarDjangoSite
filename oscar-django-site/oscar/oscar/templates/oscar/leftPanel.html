@@ -14,6 +14,26 @@
     {% endfor %}
     <a href="{% if prev_page_exists %}/oscar/blog/{{current_page|add:"-1"}}{% else %}#{% endif %}">Newer Posts</a> |
     <a href="{% if next_page_exists %}/oscar/blog/{{current_page|add:"+1"}}{% else %}#{% endif %}">Older Posts</a>
+    {% elif book %}
+    {% if invalid_dates %}
+    <h2>Invalid dates entered.</h2>
+    {% elif conflicts %}
+    <h2>A booking already exists within this date.</h2>
+    {% elif bookingPerformed %}
+    <h2>Room booked</h2>
+    {% endif %}
+    <h1>Select Date and Time for Booking</h1>
+    <form action="/oscar/book/" method="post">
+        {% csrf_token %}
+    Booking Name: <br />
+    <input type="text" name="name" required> <br />
+    Select start date time: <br />
+    <input type="datetime-local" name="booking_start" required> <br />
+    Select end date time: <br />
+    <input type="datetime-local" name="booking_end" required> <br />
+    <input type="submit" value="Book"> <br />
+    </form>
+    <iframe src="https://calendar.google.com/calendar/embed?src=l7tjei0aeg59j6s9fj8gd92tv0%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     {% else %}
     <h1 id="about">Introduction</h1>
     <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper eu justo nec mattis. Ut ac pretium nunc. Nunc mauris orci, ultricies at neque id, porta tristique turpis. Maecenas nec urna sit amet purus faucibus placerat non sit amet libero. Suspendisse non eros ipsum. Morbi vel nisi tortor. Nunc a sem placerat, scelerisque purus sit amet, auctor orci. Pellentesque ut ultrices leo, eget maximus metus. In at nisi nec mi varius mollis. Duis ac volutpat nunc, sed pharetra dolor. Morbi imperdiet sapien purus, a commodo nisi tristique et. Aliquam porta varius justo in suscipit. Phasellus sollicitudin luctus nisl, sit amet posuere tortor pulvinar ac.</p>
